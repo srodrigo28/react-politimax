@@ -82,7 +82,7 @@ export function Gestor() {
             <input type="text" className='form-control' placeholder='telefone' 
               value={telefone} onChange={ e => setTelefone(e.target.value)} 
             />
-            <input type="text" className='form-control' placeholder='senha'
+            <input type="password" className='form-control' placeholder='senha'
               value={senha} onChange={ e => setSenha(e.target.value)} 
             />
           </div>
