@@ -3,13 +3,15 @@ import { useState } from 'react'
 import axios from 'axios'
 
 export function Users() {
-  const url = "https://api-vercel-virid.vercel.app/users";
+  const url = "http://localhost:3000/users";
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
   const [telefone, setTelefone] = useState('')
   const [senha, setSenha] = useState('')
 
-  const  Inserir = () => {
+  const  Inserir = (e) => {
+    e.preventDefault();
+    
     axios.post(url, {
       nome,
       email,
@@ -31,7 +33,7 @@ export function Users() {
   }
   return (
     <div className='container'>
-      <form>
+      <form onSubmit={Inserir}>
         <h1>Cadastro Usuário</h1>
         <div className="row">
           <div className="col">
@@ -50,8 +52,8 @@ export function Users() {
           </div>
         </div>
         <div className='btn-group'>
-          <button className='btn btn-outline-primary' onClick={ Inserir }>Entrar</button>
-          <button className='btn btn-outline-warning' onClick={ Inserir }>Cadastra</button>
+          <button className='btn btn-outline-primary'>Entrar</button>
+          <button className='btn btn-outline-warning'>Cadastra</button>
         </div>      
       </form>
 

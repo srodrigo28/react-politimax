@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "nome": "admin",
+      "email": "admin@gmail.com",
+      "telefone": "(62) 9998 - 8889",
+      "senha": "123"
+    },
+    {
+      "id": "cdd8",
+      "nome": "SEBASTIAO RODRIGO NASCIMENTO SOUSA",
+      "email": "rodrigoexer1@gmail.com",
+      "telefone": "62985921140",
+      "senha": "123"
+    },
+    {
+      "id": "49a8",
+      "nome": "Maria Silva",
+      "email": "msilva@terra.com",
+      "telefone": "62994243131",
+      "senha": "123"
+    },
+    {
+      "id": "0b8c",
+      "nome": "carla alessandra",
+      "email": "carla@gmail.com",
+      "telefone": "62985921140",
+      "senha": "123"
+    }
+  ],
+  "gestores": [
+    {
+      "id": "1",
+      "nome": "ana",
+      "sexo": "feminino",
+      "email": "ana@gmail.com",
+      "telefone": "(62) 9998 - 8889",
+      "senha": "123"
+    },
+    {
+      "id": "fd62",
+      "nome": "SEBASTIAO RODRIGO NASCIMENTO SOUSA",
+      "sexo": "m",
+      "email": "rodrigoexer1@gmail.com",
+      "telefone": "62985921140",
+      "senha": "123"
+    },
+    {
+      "id": "f3a1",
+      "nome": "SEBASTIAO RODRIGO NASCIMENTO SOUSA",
+      "sexo": "m",
+      "email": "rodrigoexer1@gmail.com",
+      "telefone": "62985921140",
+      "senha": "123"
+    }
+  ]
+}
