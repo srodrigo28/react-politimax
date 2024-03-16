@@ -5,8 +5,8 @@ import axios from 'axios'
 import { Link } from 'react-router-dom';
 
 export function Afiliados() {
-  const url1 = "https://api-vercel-virid.vercel.app/afiliados";
-  const url = "http://localhost:3000/afiliados";
+  const url = "https://api-vercel-virid.vercel.app/afiliados";
+  const url1 = "http://localhost:3000/afiliados";
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
   const [telefone, setTelefone] = useState('')
@@ -29,7 +29,6 @@ export function Afiliados() {
     { name: "secao", label: "secao" },
     { name: "gestorId", label: "gestorId" }
 ]
-
   // 1 - hooks
   const [afiliadosData, setAfiliadosData] = useState([]);
 
@@ -69,6 +68,7 @@ export function Afiliados() {
       window.location.reload(true)
     })
     .catch( (error) => {
+        // window.location.reload(true)
         alert(' error:( ' + error.message)
         console.log('error: ' + error)
     })

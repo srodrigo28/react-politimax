@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios'
 
 export function Gestor() {
-  const url = "http://localhost:3000/gestores   ";
-  const url2 = "https://api-vercel-virid.vercel.app/gestores";
+  const url1 = "http://localhost:3000/gestores";
+  const url = "https://api-vercel-virid.vercel.app/gestores";
 
   const [nome, setNome] = useState('')
   const [sexo, setSexo] = useState('')
@@ -57,8 +57,9 @@ export function Gestor() {
       window.location.reload(true)
     })
     .catch( (error) => {
-        alert(' error:( ' + error.message)
+        // alert(' error:( ' + error.message)
         console.log('error: ' + error)
+        window.location.reload(true)
     })
   }
   return (
@@ -89,7 +90,7 @@ export function Gestor() {
         </div>
         <div className="row">
         <div className="col">            
-            <input type="text" className='form-control' placeholder='**************'
+            <input type="password" className='form-control' placeholder='**************'
               value={senha} onChange={ e => setSenha(e.target.value)}
             />
           </div>
@@ -103,6 +104,7 @@ export function Gestor() {
           columns={columns}
       />
       <Link to="/" className="btn btn-danger mt-3 w-25">Sair</Link>
+      <Link to="/afiliados" className="btn btn-primary mt-3 w-25">Afiados</Link>
       </form>
 
       

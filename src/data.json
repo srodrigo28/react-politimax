@@ -69,6 +69,22 @@
       "email": "admin@gmail.com",
       "telefone": "62985921140",
       "senha": "123456"
+    },
+    {
+      "id": "24d6",
+      "nome": "Maria",
+      "sexo": "feminino",
+      "email": "maria@gmail.com",
+      "telefone": "65153185",
+      "senha": "123456"
+    },
+    {
+      "id": "f6dc",
+      "nome": "Edson",
+      "sexo": "masculino",
+      "email": "edson@gmail.com",
+      "telefone": "83723874 ",
+      "senha": "123456"
     }
   ],
   "afiliados": [
@@ -87,7 +103,7 @@
       "data_nasc": "25/02/1994",
       "zona": "154",
       "secao": "68",
-      "gestorId": 1,
+      "gestorId": "Sebastião",
       "id": "7ec5"
     },
     {
@@ -100,7 +116,7 @@
       "titulo": "215321",
       "zona": "231853218",
       "secao": "215321",
-      "gestorId": ""
+      "gestorId": "Sebastião"
     },
     {
       "id": "cf74",
@@ -112,6 +128,30 @@
       "titulo": "5432105",
       "zona": "2315",
       "secao": "251532",
+      "gestorId": "Edson"
+    },
+    {
+      "id": "07a0",
+      "nome": "Ronaldo",
+      "email": "ronaldo@gmail.com",
+      "telefone": "65311853215",
+      "cpf": "051354",
+      "sexo": "masculino",
+      "titulo": "21532558",
+      "zona": "2315321",
+      "secao": "21353215",
+      "gestorId": "Edson"
+    },
+    {
+      "id": "001b",
+      "nome": "mauricio siqueira",
+      "email": "mauricios@gmail.com",
+      "telefone": "1532185",
+      "cpf": "32185",
+      "sexo": "masculino",
+      "titulo": "3215",
+      "zona": "1853215",
+      "secao": "3158",
       "gestorId": ""
     }
   ]
