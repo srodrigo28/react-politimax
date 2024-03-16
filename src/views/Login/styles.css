@@ -1,6 +1,6 @@
 .area-login-background{
     height: 100vh;
-    width: 60%;
+    width: 50%;
     display: block;
     float: left;
     background-image: url('./../../assets/background-login.png');
@@ -12,7 +12,7 @@
 }
 .area-form{
     height: 100vh;
-    width: 40%;
+    width: 50%;
     float: left;
     background-color: #fff;
     display: flex;
