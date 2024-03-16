@@ -14,6 +14,13 @@ export function Gestor(props) {
   const [telefone, setTelefone] = useState('')
   const [senha, setSenha] = useState('')
 
+  const handleValidar = () =>{
+    if(nome == '' || sexo == '' || email == '' || telefone == '' || senha == ''){
+      alert("Todos os campos são obrigatórios!")
+    }
+    Inserir()
+  }
+
   const columns = [
     { name: "id", label: "id" },
     { name: "nome", label: "nome" },
@@ -21,7 +28,6 @@ export function Gestor(props) {
     { name: "email", label: "email" },
     { name: "telefone", label: "telefone" },
 ]
-
   // 1 - hooks
   const [afiliadosData, setAfiliadosData] = useState([]);
 
@@ -30,17 +36,14 @@ export function Gestor(props) {
       getData()
   }, [])
 
+
+
   const getData = async () => {
       await axios.get(url).then((response) => {
           const data = response.data
           setAfiliadosData(data)
           console.log(data)
       })
-  }
-
-  const validar = () =>{
-    getData()
-    alert("Todos os campos são obrigatórios!")
   }
 
   const  Inserir = (e) => {
@@ -66,7 +69,7 @@ export function Gestor(props) {
   }
   return (
     <div className='container'>
-      <form onSubmit={Inserir}>
+      <form onSubmit={handleValidar}>
         <div className="d-flex justify-content-between">
         <h1>Cadastro Gestores</h1> <h2> Hello { props.email }</h2>
         </div>
