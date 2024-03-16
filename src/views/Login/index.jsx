@@ -1,42 +1,26 @@
 import './login.css'
 import axios from 'axios'
 import { useState } from 'react'
-import { redirect, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function Login() {
   const url = "https://api-vercel-virid.vercel.app/users";
-  const [nome, setNome] = useState('')
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState('')
   const [senha, setSenha] = useState('')
 
-  const  Inserir = () => {
-    axios.get(url, {
-      nome,
-      email,
-      senha
-    })
-    .then( () => {
-      setNome('')
-      setEmail('')
-      setSenha('')
-    })
-    .catch( (error) => {
-        console.log('error: ' + error)
-    })
-  }
-
   const LoginEntrar = async (e) => {
     e.preventDefault();
-    if( email === '') {
-      alert('Precisa preencher campo email')
-      return false;
-    }else if( senha === ''){
-      alert('Precisa preencher campo senha')
-      return false;
-    }else{
-        return redirect("/login")
-    }
     
+    if (email == 'admin@gmail.com' & senha == '123456'){
+      alert('Sucesso Login')
+      navigate("/gestores");
+
+    }else{
+      alert('Error usuário ou senha')
+    }  
   }
   
   return (
@@ -52,7 +36,7 @@ export function Login() {
                   value={senha} onChange={ e => setSenha(e.target.value)} 
                 />
             <div className="group-btn d-flex gap-3 justify-content-center">
-              <Link to="/afiliados" className='btn btn-primary mobile'>
+              <Link className='btn btn-primary mobile' onClick={LoginEntrar}>
                 Entrar
               </Link>
               <button className='btn btn-success mobile'>Cadastro</button>

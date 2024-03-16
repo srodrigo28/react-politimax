@@ -57,6 +57,7 @@ export function Gestor() {
       window.location.reload(true)
     })
     .catch( (error) => {
+        alert( nome + ' Cadastrado com sucesso')
         // alert(' error:( ' + error.message)
         console.log('error: ' + error)
         window.location.reload(true)

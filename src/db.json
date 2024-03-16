@@ -89,6 +89,7 @@
   ],
   "afiliados": [
     {
+      "id": "7ec5",
       "nome": "daniela silva sousa",
       "email": "daniela@terra.com",
       "cpf": "01046088999",
@@ -103,8 +104,7 @@
       "data_nasc": "25/02/1994",
       "zona": "154",
       "secao": "68",
-      "gestorId": "Sebastião",
-      "id": "7ec5"
+      "gestorId": "Sebastião"
     },
     {
       "id": "0273",

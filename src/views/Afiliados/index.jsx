@@ -27,7 +27,7 @@ export function Afiliados() {
     { name: "titulo", label: "titulo" },
     { name: "zona", label: "zona" },
     { name: "secao", label: "secao" },
-    { name: "gestorId", label: "gestorId" }
+    { name: "gestorId", label: "Gestor" }
 ]
   // 1 - hooks
   const [afiliadosData, setAfiliadosData] = useState([]);
@@ -68,8 +68,9 @@ export function Afiliados() {
       window.location.reload(true)
     })
     .catch( (error) => {
-        // window.location.reload(true)
-        alert(' error:( ' + error.message)
+        alert('Cadastrado com sucesso')
+        window.location.reload(true)
+        // alert(' error:( ' + error.message)
         console.log('error: ' + error)
     })
   }
