@@ -1,25 +1,33 @@
 import './styles.css'
 import { useState, useEffect } from 'react'
 import MUIDataTable from "mui-datatables";
-import { Link } from 'react-router-dom';
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
-export function Gestor() {
-  const url = "http://localhost:3000/gestores   ";
-  const url2 = "https://api-vercel-virid.vercel.app/gestores";
-
+export function Afiliados() {
+  const url1 = "https://api-vercel-virid.vercel.app/afiliados";
+  const url = "http://localhost:3000/afiliados";
   const [nome, setNome] = useState('')
-  const [sexo, setSexo] = useState('')
   const [email, setEmail] = useState('')
   const [telefone, setTelefone] = useState('')
-  const [senha, setSenha] = useState('')
+  const [cpf, setCpf] = useState('')
+  const [sexo, setSexo] = useState('')
+  const [titulo, setTitulo] = useState('')
+  const [zona, setZona] = useState('')
+  const [secao, setSecao] = useState('')
+  const [gestorId, setGestorId] = useState('')
 
   const columns = [
     { name: "id", label: "id" },
     { name: "nome", label: "nome" },
-    { name: "sexo", label: "sexo" },
     { name: "email", label: "email" },
     { name: "telefone", label: "telefone" },
+    { name: "cpf", label: "cpf" },
+    { name: "sexo", label: "sexo" },
+    { name: "titulo", label: "titulo" },
+    { name: "zona", label: "zona" },
+    { name: "secao", label: "secao" },
+    { name: "gestorId", label: "gestorId" }
 ]
 
   // 1 - hooks
@@ -46,14 +54,18 @@ export function Gestor() {
     e.preventDefault();
     axios.post(url, {
       nome,
-      sexo,
       email,
       telefone,
-      senha
+      cpf,
+      sexo,
+      titulo,
+      zona,
+      secao,
+      gestorId
     })
     .then( () => {
       alert( nome + ' Cadastrado com sucesso')
-      setNome(''), setSexo(''), setEmail(''), setTelefone(''),  setSenha('')
+      setNome(''), setEmail(''), setTelefone(''), setCpf(''), setTitulo(''), setZona(''), setSecao(''), setGestorId('')
       window.location.reload(true)
     })
     .catch( (error) => {
@@ -64,7 +76,7 @@ export function Gestor() {
   return (
     <div className='container'>
       <form onSubmit={Inserir}>
-        <h1>Cadastro Gestores</h1>
+        <h1>Cadastro Afiliados</h1>
         <div className="row">
           <div className="col">
             <input type="text" className='form-control' placeholder='nome' 
@@ -89,8 +101,23 @@ export function Gestor() {
         </div>
         <div className="row">
         <div className="col">            
-            <input type="text" className='form-control' placeholder='**************'
-              value={senha} onChange={ e => setSenha(e.target.value)}
+            <input type="text" className='form-control' placeholder='CPF'
+              value={cpf} onChange={ e => setCpf(e.target.value)}
+            />
+          </div>
+          <div className="col">            
+            <input type="text" className='form-control' placeholder='Titulo'
+              value={titulo} onChange={ e => setTitulo(e.target.value)}
+            />
+          </div>
+          <div className="col">            
+            <input type="text" className='form-control' placeholder='Zona'
+              value={zona} onChange={ e => setZona(e.target.value)}
+            />
+          </div>
+          <div className="col">            
+            <input type="text" className='form-control' placeholder='Seção'
+              value={secao} onChange={ e => setSecao(e.target.value)}
             />
           </div>
         </div>

@@ -1,0 +1,56 @@
+.sidemenu{
+    width: 210px;
+    height: 100vh;
+    min-height: 100vh;
+
+    display: block;
+    float: left;
+    background-color: darkviolet;
+    padding: 10px 0px;
+
+    box-shadow: 4px 0 10px 4px #0a0a0a30;
+    margin-right: 16px;
+
+    ul{
+        padding: 0;
+    }
+
+    .logo{
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 4px;
+    }
+
+    li{
+        font-size: 14px;
+        font-weight: 500;
+        color: #fafafa;
+        padding: 10px 24px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        transition: 0.5s linear all;
+        cursor: pointer;
+        mat-icon{
+            margin-right: 5px;
+            font-size: 20px;
+        }
+        &:hover{
+            background-color: darksalmon;
+            color: #1c1c1c;
+            transform: translateX(1rem);
+        }
+    }
+    .logout{
+        position: absolute;
+        bottom: 20px;
+        width: 210px;
+    }
+}
+
+
+a{
+    text-decoration: none;
+    list-style: none;
+}

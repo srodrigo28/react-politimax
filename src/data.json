@@ -53,6 +53,66 @@
       "email": "rodrigoexer1@gmail.com",
       "telefone": "62985921140",
       "senha": "123"
+    },
+    {
+      "id": "9826",
+      "nome": "Rodrigo Nascimento",
+      "sexo": "masculino",
+      "email": "rodrigoexer1@gmail.com",
+      "telefone": "62985921140",
+      "senha": "123456"
+    },
+    {
+      "id": "929c",
+      "nome": "Ana Maria",
+      "sexo": "feminino",
+      "email": "admin@gmail.com",
+      "telefone": "62985921140",
+      "senha": "123456"
+    }
+  ],
+  "afiliados": [
+    {
+      "nome": "daniela silva sousa",
+      "email": "daniela@terra.com",
+      "cpf": "01046088999",
+      "telefone": "62 985921140",
+      "cep": "7419218",
+      "uf": "go",
+      "sexo": "f",
+      "bairro": "jardim tiradentes",
+      "logradouro": "rua 05, quadra 18",
+      "complemento": "casa 2",
+      "titulo": "215215",
+      "data_nasc": "25/02/1994",
+      "zona": "154",
+      "secao": "68",
+      "gestorId": 1,
+      "id": "7ec5"
+    },
+    {
+      "id": "0273",
+      "nome": "Fabricio",
+      "email": "fab@gmail.com",
+      "telefone": "6289818318",
+      "cpf": "3215318",
+      "sexo": "masculino",
+      "titulo": "215321",
+      "zona": "231853218",
+      "secao": "215321",
+      "gestorId": ""
+    },
+    {
+      "id": "cf74",
+      "nome": "Alex Silva",
+      "email": "alex@terra.com",
+      "telefone": "5132132185",
+      "cpf": "3210823158",
+      "sexo": "masculino",
+      "titulo": "5432105",
+      "zona": "2315",
+      "secao": "251532",
+      "gestorId": ""
     }
   ]
 }
