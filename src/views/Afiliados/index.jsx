@@ -47,42 +47,49 @@ export function Afiliados() {
 
   const validar = () =>{
     alert("Todos os campos são obrigatórios!")
+    if(nome == '' || email == '' || telefone == ''){
+      "Por favor preencher todos os campos"
+    }else if(gestorId == 'Gestor' || gestorId == ''){
+      "Por favor preencher o Gestor"
+    }else{
+      Inserir()
+    }
   }
 
   const  Inserir = (e) => {
     e.preventDefault();
-    axios.post(url, {
-      nome,
-      email,
-      telefone,
-      cpf,
-      sexo,
-      titulo,
-      zona,
-      secao,
-      gestorId
-    })
-    .then( () => {
-      alert( nome + ' Cadastrado com sucesso')
-      setNome(''), setEmail(''), setTelefone(''), setCpf(''), setTitulo(''), setZona(''), setSecao(''), setGestorId('')
-      window.location.reload(true)
-    })
-    .catch( (error) => {
-        alert('Cadastrado com sucesso')
+      axios.post(url, {
+        nome,
+        email,
+        telefone,
+        cpf,
+        sexo,
+        titulo,
+        zona,
+        secao,
+        gestorId
+      })
+      .then( () => {
+        alert( nome + ' Cadastrado com sucesso')
+        setNome(''), setEmail(''), setTelefone(''), setCpf(''), setTitulo(''), setZona(''), setSecao(''), setGestorId('')
         window.location.reload(true)
-        // alert(' error:( ' + error.message)
-        console.log('error: ' + error)
-    })
+      })
+      .catch( (error) => {
+          alert('Cadastrado com sucesso')
+          window.location.reload(true)
+          // alert(' error:( ' + error.message)
+          console.log('error: ' + error)
+      })
   }
   return (
     <div className='container'>
-      <form onSubmit={Inserir}>
+      <form onSubmit={validar}>
         <h1>Cadastro Afiliados</h1>
         <div className="row">
           <div className="col">
             <select type="text" className='form-control' 
               value={gestorId} onChange={ e => setGestorId(e.target.value)}>
-                <option value="Henrique">Gestor</option>
+                <option value="Gestor">Gestor</option>
                 <option value="Henrique">Henrique</option>
                 <option value="Alan">Alan</option>
                 <option value="Matheus">Matheus</option>
