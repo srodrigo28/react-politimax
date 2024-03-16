@@ -80,6 +80,16 @@ export function Afiliados() {
         <h1>Cadastro Afiliados</h1>
         <div className="row">
           <div className="col">
+            <select type="text" className='form-control' 
+              value={gestorId} onChange={ e => setGestorId(e.target.value)}>
+                <option value="Henrique">Gestor</option>
+                <option value="Henrique">Henrique</option>
+                <option value="Alan">Alan</option>
+                <option value="Matheus">Matheus</option>
+                <option value="Daniel">Daniel</option>
+              </select>
+          </div>
+          <div className="col">
             <input type="text" className='form-control' placeholder='nome' 
               value={nome} onChange={ e => setNome(e.target.value)}
             />

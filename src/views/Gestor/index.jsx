@@ -4,7 +4,7 @@ import MUIDataTable from "mui-datatables";
 import { Link } from 'react-router-dom';
 import axios from 'axios'
 
-export function Gestor() {
+export function Gestor(props) {
   const url1 = "http://localhost:3000/gestores";
   const url = "https://api-vercel-virid.vercel.app/gestores";
 
@@ -33,12 +33,13 @@ export function Gestor() {
   const getData = async () => {
       await axios.get(url).then((response) => {
           const data = response.data
-          // console.log(data)
           setAfiliadosData(data)
+          console.log(data)
       })
   }
 
   const validar = () =>{
+    getData()
     alert("Todos os campos são obrigatórios!")
   }
 
@@ -66,7 +67,9 @@ export function Gestor() {
   return (
     <div className='container'>
       <form onSubmit={Inserir}>
-        <h1>Cadastro Gestores</h1>
+        <div className="d-flex justify-content-between">
+        <h1>Cadastro Gestores</h1> <h2> Hello { props.email }</h2>
+        </div>
         <div className="row">
           <div className="col">
             <input type="text" className='form-control' placeholder='nome' 
