@@ -15,7 +15,7 @@ export function Login() {
   const LoginEntrar = async (e) => {
     e.preventDefault();
     
-    if (email == 'admin@gmail.com' & senha == '123456'){
+    if (email == 'admin@gmail.com' & senha == '@2024@123'){
       alert('Sucesso Login')
       navigate("/gestores");
 
