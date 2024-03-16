@@ -3,7 +3,7 @@ import { useState } from 'react'
 import axios from 'axios'
 
 export function Gestor() {
-  const url = "http://localhost:3000/gestores";
+  const url = "https://api-vercel-virid.vercel.app/gestores";
   const [nome, setNome] = useState('')
   const [sexo, setSexo] = useState('m')
   const [email, setEmail] = useState('')
@@ -63,6 +63,7 @@ export function Gestor() {
         console.log('error: ' + error)
     })
   }
+  
   return (
     <div className='container'>
       <form>

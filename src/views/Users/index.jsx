@@ -3,7 +3,7 @@ import { useState } from 'react'
 import axios from 'axios'
 
 export function Users() {
-  const url = "http://localhost:3000/users";
+  const url = "https://api-vercel-virid.vercel.app/users";
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
   const [telefone, setTelefone] = useState('')
@@ -27,9 +27,9 @@ export function Users() {
       
       alert('Sucesso')
     })
-    // .catch( (error) => {
-    //     console.log('error: ' + error)
-    // })
+    .catch( (error) => {
+        console.log('error: ' + error)
+    })
   }
   return (
     <div className='container'>
