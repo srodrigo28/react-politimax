@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios'
 
 export function Gestor(props) {
-  const url1 = "http://localhost:3000/gestores";
+  const url_offline = "http://localhost:3000/gestores";
   const url = "https://api-vercel-virid.vercel.app/gestores";
 
   const [nome, setNome] = useState('')

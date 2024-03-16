@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export function Afiliados() {
   const url = "https://api-vercel-virid.vercel.app/afiliados";
-  const url1 = "http://localhost:3000/afiliados";
+  const url_offline = "http://localhost:3000/afiliados";
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
   const [telefone, setTelefone] = useState('')
