@@ -1,4 +1,4 @@
-import './styles.css'
+import './login.css'
 import { useState } from 'react'
 import axios from 'axios'
 
@@ -35,10 +35,11 @@ export function Login() {
     }
     alert('Sistema indisponivel, verificar versão código 7003 :<')
   }
+  
   return (
     <>
       <div className="area-login-background"></div>
-      <div class="area-form">
+      <div className="area-form">
           <form className='w-100' onSubmit={LoginEntrar}>
             <h1>Bem vindo,</h1>
                 <input type="text" className='input-form form-control' placeholder='email'
@@ -47,12 +48,12 @@ export function Login() {
                 <input type="password" className='input-form form-control' placeholder='senha'
                   value={senha} onChange={ e => setSenha(e.target.value)} 
                 />
-            <div class="group-btn d-flex gap-3 justify-content-center">
+            <div className="group-btn d-flex gap-3 justify-content-center">
               <button type='submit' className='btn btn-primary mobile'>Entrar</button>
               <button type='submit' className='btn btn-success mobile'>Cadastro</button>
             </div>      
           </form>
-          <p class="footer"> <span>copy 2024</span> | Desenvolvendo <span>Seb App</span> </p>
+          <p className="footer"> <span>copy 2024</span> | Desenvolvendo <span>Seb App</span> </p>
       </div>
     </>
   )
