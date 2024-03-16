@@ -36,7 +36,6 @@ export function Login() {
                 <input type="password" className='input-form form-control' placeholder='senha'
                   value={senha} onChange={ e => setSenha(e.target.value)} 
                 />
-                <h3>{error} { email }</h3>
             <div className="group-btn d-flex gap-3 justify-content-center">
               <button className='btn btn-primary mobile' onClick={LoginEntrar}>Entrar</button>
               <button className='btn btn-success mobile' onClick={ (e) => handleLogin(e) }>Registar</button>
